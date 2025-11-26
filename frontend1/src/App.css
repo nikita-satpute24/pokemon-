@@ -1,0 +1,292 @@
+/* Main container */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff4d4d, #ff884d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Search Bar Area */
+.search-area {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+/* Modern Error Box */
+.error-message {
+  width: 280px;
+  background: #fff5f5;
+  border: 1px solid #ffb3b3;
+  padding: 16px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #c0392b;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.2);
+
+  /* animation */
+  animation: slideIn 0.35s ease-out, glowPulse 2s infinite ease-in-out;
+}
+
+/* Error Icon Circle */
+.error-message::before {
+  content: "⚠️";
+  font-size: 18px;
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Soft glowing pulse around the box */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 6px 18px rgba(255, 0, 0, 0.35);
+  }
+  100% {
+    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.15);
+  }
+}
+
+
+/* Content area (card centering) */
+.content-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Search Bar Styling */
+.search-container {
+  display: flex;
+  width: 100%;
+  background: white;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.search-container input {
+  flex: 1;
+  padding: 12px 18px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-radius: 50px;
+  background: transparent;
+}
+
+.search-container button {
+  padding: 12px 20px;
+  background: #ff5252;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-left: 10px;
+  transition: 0.3s ease;
+}
+
+.search-container button:hover {
+  background: linear-gradient(45deg, #ff4d4d, #ffcc00);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Pokémon Card */
+.poke-card {
+  width: 430px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  animation: fadeIn 0.34s ease;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  max-height: none;
+  overflow: visible;
+}
+
+.poke-card img {
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.poke-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 8px 0 5px 0;
+  color: #2d3436;
+  letter-spacing: 1px;
+}
+
+/* ID + Height/Weight layout */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px ;
+  padding: 12px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Section title */
+.section-title {
+  font-size: 20px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #ff4d4d;
+  letter-spacing: 0.5px;
+}
+
+/* Type badges */
+.type-badge {
+ padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* Type container */
+.type-container,
+.ability-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Ability badges */
+.ability-badge {
+  padding: 7px 12px;
+  background: #636e72;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Base Experience */
+.base-exp {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff3838;
+  margin-top: 6px;
+}
+
+/* Moves List */
+.moves-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.moves-list li {
+  margin: 6px 0;
+  font-weight: 600;
+  color: #2d3436;
+  font-size: 15px;
+}
+/* Battle Stats */
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.stat-name {
+  width: 120px;
+  font-weight: 700;
+  color: #2d3436;
+  text-transform: uppercase;
+}
+
+/* Stats Bar Background */
+.stat-bar {
+  flex: 1;
+  height: 12px;
+  background: #f1f1f1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Stats Bar Fill (matches your red theme) */
+.stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b, #ff3d3d);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+/* Stat number */
+.stat-value {
+  width: 40px;
+  text-align: right;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+/* Type Colors */
+.type-badge.fire    { background-color: #ff6b6b; }
+.type-badge.water   { background-color: #3498db; }
+.type-badge.grass   { background-color: #00b894; }
+.type-badge.electric{ background-color: #fdcb6e; color: #000; }
+.type-badge.psychic { background-color: #a29bfe; }
+.type-badge.normal  { background-color: #b2bec3; }
+.type-badge.ground  { background-color: #d2b48c; }
+.type-badge.flying  { background-color: #81ecec; }
+.type-badge.ghost   { background-color: #6c5ce7; }
+.type-badge.steel   { background-color: #b4c6c7; }
+.type-badge.ice     { background-color: #74b9ff; }
+.type-badge.dragon  { background-color: #ff9f43; }
